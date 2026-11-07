@@ -1,210 +1,84 @@
 # MEDTRACK
-# MEDTRACK
-### Your NEET PG & INI-CET Preparation, Structured.
 
-**An offline-first, privacy-focused study management Progressive Web App (PWA) designed to help medical aspirants plan lectures, track QBank performance, manage revisions, and measure preparation progress — all from one place.**
+**An offline-first NEET PG and INI-CET preparation manager built with React, TypeScript, and IndexedDB.**
 
-<p align="center">
-  <strong>React · TypeScript · IndexedDB · Vite · PWA · AES-256-GCM</strong>
-</p>
+MEDTRACK helps medical aspirants organize lectures, track QBank performance, schedule daily study sessions, manage revision cycles, and monitor preparation progress through a single installable Progressive Web App (PWA).
 
----
+The application follows a local-first architecture. Core functionality and study data run on the user's device, without requiring a backend or account.
 
-## Overview
+## Features
 
-MEDTRACK is an offline-first preparation management system built for **NEET PG and INI-CET aspirants**.
+- **Lecture Management:** Catalogue of 1,733 lectures across 19 subjects, with search, filters, sorting, tags, and progress tracking.
+- **Study Tracking:** Track lecture status, playback speed, planned duration, and actual study time.
+- **QBank Tracking:** Record question attempts, accuracy, targets, difficult questions, and mistake notes independently of lecture completion.
+- **Revision Management:** Configurable spaced-repetition cycles with confidence ratings and overdue revision tracking.
+- **Study Scheduler:** Deterministic Balanced, Deadline, and Flexible scheduling modes with priorities, off days, pinned tasks, and recovery plans.
+- **Analytics:** Preparation readiness index, completion forecasts, weak-topic analysis, study heatmaps, mock-test tracking, and weekly reports.
+- **Audit History:** Transaction-based updates with activity history and undo support.
+- **Offline Support:** Installable PWA with local data storage and service-worker caching.
+- **Encrypted Backup:** Optional AES-256-GCM encrypted backups through Google Drive.
 
-It brings lecture tracking, QBank analytics, deterministic study scheduling, spaced revision, preparation insights, and encrypted backups into a single installable application.
+## Tech Stack
 
-Unlike conventional cloud-dependent study trackers, MEDTRACK follows a **local-first architecture**. Your study records remain on your device, the application works offline after its initial load, and cloud backup is optional.
+- React
+- TypeScript
+- Vite
+- IndexedDB
+- Progressive Web App (PWA)
+- AES-256-GCM
+- Google Drive API
+- Vitest
+- Vercel
 
-**No backend. No mandatory account. No analytics. No advertisements. Your preparation data stays yours.**
-
-## Key Features
-
-### 1. Lecture Catalogue & Tracking
-- 1,733 validated lectures across 19 subjects.
-- Main lectures, revision lectures, and MCQ discussion categories.
-- Search, filtering, sorting, tagging, and bulk actions.
-- Five independent lecture statuses.
-- Playback speeds: 1.0x, 1.2x, 1.5x, 1.8x, and 2.0x.
-- Global, subject-level, and lecture-level speed overrides.
-- Actual study time tracked separately from planned duration.
-- Complete audit history with undo support.
-
-### 2. QBank Performance Tracking
-- Record QBank sessions independently of lecture completion.
-- Track attempted, correct, and incorrect questions.
-- Calculate accuracy using correct ÷ attempted.
-- Set question-solving targets.
-- Import QBank records through CSV.
-- Track difficult questions and maintain mistake notes.
-
-### 3. Smart Revision Management
-- Configurable spaced-repetition intervals.
-- Default revision cycle: 1, 3, 7, 15, and 30 days.
-- Global and individual revision configurations.
-- Confidence ratings for revision sessions.
-- Today, overdue, and upcoming revision views.
-
-### 4. Deterministic Study Scheduler
-Three scheduling strategies:
-- **Balanced:** Distributes work across available study time.
-- **Deadline:** Prioritizes completion against a target date.
-- **Flexible:** Adapts to personal availability.
-
-Additional capabilities:
-- Daily study capacity and off-day management.
-- Priority-based and pinned tasks.
-- Manual scheduling controls.
-- Revision tasks included in daily capacity.
-- Atomic lecture scheduling with transparent overrun handling.
-- Optional lecture splitting.
-- Recovery plans with preview and explicit Apply or Keep My Schedule actions.
-
-### 5. Analytics & Preparation Insights
-- Preparation readiness index with transparent components and editable weights.
-- Expected syllabus completion date.
-- What-if playback speed simulator.
-- Study Reality Check.
-- Weak Topic Radar.
-- Subject-wise completion forecasts.
-- Preparation milestones and mock-test tracking.
-- Study heatmaps and weekly reports.
-- Preparation debt and data-health monitoring.
-
-### 6. Privacy & Encrypted Backup
-- Local-first data storage using IndexedDB.
-- AES-256-GCM encrypted backup archives.
-- Optional Google Drive integration using the appData folder.
-- Offline backup queue.
-- No application backend.
-- No third-party analytics or advertisements.
-
----
-
-## Technology Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | React |
-| Language | TypeScript |
-| Build Tool | Vite |
-| Local Database | IndexedDB |
-| Application Architecture | Progressive Web App |
-| Encryption | AES-256-GCM |
-| Cloud Backup | Google Drive API (optional) |
-| Testing | Vitest |
-| Deployment | Vercel |
-
-## Architecture
-
-MEDTRACK uses a local-first architecture with clear separation between the user interface, application logic, persistence, and optional backup infrastructure.
-
-```text
-                MEDTRACK PWA
-                     |
-          React + TypeScript UI
-                     |
-             Domain Layer
-       (Scheduling, Analytics,
-        Revision, Calculations)
-                     |
-             Repository Layer
-        (Transactions + Audit Trail)
-                     |
-                IndexedDB
-              Local Storage
-                     |
-          Optional Backup Layer
-                     |
-           AES-256-GCM Archive
-                     |
-              Google Drive
-              (appData Folder)
-```
-
-**Core architectural principles:**
-- Offline-first application functionality.
-- Local ownership of preparation data.
-- Deterministic and reproducible scheduling.
-- Transaction-based data modifications.
-- Auditability and reversible operations.
-- Optional encrypted cloud backup.
-
-## Project Structure
+## Project Architecture
 
 ```text
 MEDTRACK/
-│
 ├── public/
 │   └── data/
 │       ├── marrow_catalogue.json
 │       ├── marrow_catalogue.csv
-│       ├── import_report.json
-│       └── ...
-│
+│       └── import_report.json
 ├── src/
 │   ├── db/
-│   │   └── schema.ts
-│   │
 │   ├── domain/
-│   │   ├── calculations
-│   │   ├── scheduler
-│   │   ├── importer
-│   │   └── analytics
-│   │
 │   ├── data/
-│   │   ├── repositories
-│   │   ├── settings
-│   │   └── live queries
-│   │
 │   ├── backup/
-│   │   ├── encryption
-│   │   ├── google drive
-│   │   └── offline queue
-│   │
 │   ├── pages/
 │   └── test/
-│
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── BACKUP.md
-│   ├── DATABASE.md
-│   ├── SCHEDULING.md
-│   ├── USER_GUIDE.md
-│   └── QA_CHECKLIST.md
-│
 ├── tools/
-│   └── extract_crambook.py
-│
+├── docs/
 ├── vercel.json
 ├── package.json
 └── README.md
 ```
 
-## Installation & Local Development
+## Catalogue Statistics
+
+| Metric | Count |
+|---|---:|
+| Lectures | 1,733 |
+| Subjects | 19 |
+| Total Duration | 1,338.7 hours at 1x |
+| IndexedDB Tables | 19 |
+| Automated Tests | 59 |
+
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 18 or later.
-- npm.
-- Git.
+- Node.js 18 or later
+- npm
 
-### 1. Clone the repository
+### Installation
 
 ```bash
 git clone https://github.com/Sayan-2607/MEDTRACK.git
 cd MEDTRACK
-```
-
-### 2. Install dependencies
-
-```bash
 npm install
 ```
 
-### 3. Start development server
+### Development
 
 ```bash
 npm run dev
@@ -212,214 +86,74 @@ npm run dev
 
 Open `http://localhost:5173` in your browser.
 
-### 4. Run tests
+### Run Tests
 
 ```bash
 npm test
 ```
 
-### 5. Create production build
+### Production Build
 
 ```bash
 npm run build
-```
-
-### 6. Preview production build
-
-```bash
 npm run preview
 ```
 
 The production build is generated in the `dist/` directory.
 
----
+## Deployment
 
-## Deployment on Vercel
+MEDTRACK can be deployed on Vercel.
 
-MEDTRACK can be deployed directly from GitHub.
+1. Import the GitHub repository into Vercel.
+2. Select Vite as the framework preset.
+3. Set the build command to `npm run build`.
+4. Set the output directory to `dist`.
+5. Click Deploy.
 
-1. Open Vercel.
-2. Select **Add New → Project**.
-3. Import `Sayan-2607/MEDTRACK`.
-4. Select the project name `medtrack`.
-5. Configure the following:
-
-| Setting | Value |
-|---|---|
-| Framework | Vite |
-| Root Directory | `./` |
-| Build Command | `npm run build` |
-| Output Directory | `dist` |
-| Install Command | `npm install` |
-
-6. Add the optional Google OAuth environment variable if Drive backup is required:
+For optional Google Drive backup, configure the following environment variable:
 
 ```env
 VITE_GOOGLE_CLIENT_ID=your_google_oauth_client_id
 ```
 
-7. Click **Deploy**.
+See [docs/BACKUP.md](docs/BACKUP.md) for configuration details.
 
-The repository includes `vercel.json` for SPA routing, service-worker cache headers, and Content Security Policy configuration.
+## Privacy & Data Storage
 
-### Install as an App
+MEDTRACK is designed with a privacy-first approach.
 
-MEDTRACK is an installable PWA.
-
-- **Android:** Open the deployed URL in Chrome and select Install App.
-- **iOS:** Open the URL in Safari → Share → Add to Home Screen.
-- **Desktop:** Install through the browser's supported PWA installation option.
-
-After the initial application load and successful caching, supported application functionality and bundled catalogue data are available offline.
-
----
-
-## Project Specifications
-
-| Metric | Value |
-|---|---:|
-| Lecture records | 1,733 |
-| Subjects | 19 |
-| Catalogue duration | 1,338.7 hours at 1x |
-| IndexedDB tables | 19 |
-| Automated tests | 59 |
-| Application backend | None |
-| Mandatory cloud dependency | None |
-
-*Catalogue and test figures reflect the project's documented specifications and should be updated if the implementation changes.*
-
-## Platform Decision
-
-The original master specification envisioned a native Kotlin/Android application.
-
-MEDTRACK is implemented as a React + TypeScript Progressive Web App to support deployment through Vercel and installation across Android, iOS, and desktop browsers.
-
-The following core principles are retained:
-- Offline-first functionality.
-- Local-only primary data storage.
-- Google Drive as the optional cloud backup destination.
-- Deterministic scheduling.
-- Transactional updates.
-- Audit trails.
-- No fabricated preparation data.
-
-Platform-specific deviations are documented in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md#platform-deviations).
+- Study data is stored locally using IndexedDB.
+- No application backend is required.
+- Core functionality works offline after initial caching.
+- Google Drive integration is optional.
+- Backup archives are encrypted using AES-256-GCM.
+- No analytics or advertisements.
 
 ## Documentation
 
-| Document | Description |
-|---|---|
-| [Architecture](docs/ARCHITECTURE.md) | System architecture and design decisions |
-| [Database](docs/DATABASE.md) | IndexedDB schema and migrations |
-| [Scheduling](docs/SCHEDULING.md) | Scheduling algorithms and rules |
-| [Backup](docs/BACKUP.md) | Encryption and Google Drive integration |
-| [User Guide](docs/USER_GUIDE.md) | Application usage |
-| [QA Checklist](docs/QA_CHECKLIST.md) | Testing and validation |
-| [Import Report](docs/IMPORT_REPORT.md) | Catalogue extraction and validation |
+- [Architecture](docs/ARCHITECTURE.md)
+- [Database Schema](docs/DATABASE.md)
+- [Scheduling](docs/SCHEDULING.md)
+- [Backup](docs/BACKUP.md)
+- [User Guide](docs/USER_GUIDE.md)
+- [QA Checklist](docs/QA_CHECKLIST.md)
+- [Import Report](docs/IMPORT_REPORT.md)
 
-## Privacy Philosophy
+## Platform Note
 
-Your preparation data is personal.
+The original specification envisioned a native Kotlin/Android application. MEDTRACK is implemented as a React and TypeScript PWA to support web deployment through Vercel and installation across Android, iOS, and desktop.
 
-MEDTRACK is designed around three principles:
-
-1. **Ownership:** Your study records belong to you.
-2. **Transparency:** Scheduling and analytics should be explainable.
-3. **Privacy:** Your data should not require a third-party backend to remain useful.
-
-Google Drive backup is optional, and the application is designed to keep its core functionality available without it.
-
-## Roadmap
-
-Potential future improvements:
-
-- [ ] Advanced preparation insights.
-- [ ] More flexible custom revision algorithms.
-- [ ] Enhanced mock-test analytics.
-- [ ] Additional import formats.
-- [ ] Improved cross-device encrypted backup and restore.
-- [ ] Expanded accessibility and PWA support.
+The core principles of offline functionality, local data ownership, deterministic scheduling, transactional updates, audit history, and optional encrypted backup are retained. Platform-specific differences are documented in [ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Author
 
 **Sayan Ghosh**
 
-Computer Science & Engineering | AI/ML | Software Engineering
-
-- GitHub: [@Sayan-2607](https://github.com/Sayan-2607)
+- GitHub: [Sayan-2607](https://github.com/Sayan-2607)
 - LinkedIn: [Sayan Ghosh](https://linkedin.com/in/sayan-g-600ab5307)
 - Portfolio: [sxynn.vercel.app](https://sxynn.vercel.app)
 
 ---
 
-<p align="center">
-  <strong>MEDTRACK</strong><br/>
-  Study smarter. Revise consistently. Track everything.<br/><br/>
-  Built with a focus on privacy, reliability, and disciplined preparation.
-</p>
-
-Offline-first NEET PG & INI-CET preparation manager: lecture catalogue, lecture vs QBank tracking, deterministic scheduling, revision cycles, analytics, local reminders and encrypted Google Drive backup.
-
-Built as an **installable Progressive Web App** (React + TypeScript + IndexedDB) so it can be hosted on **Vercel** and installed on Android, iOS and desktop from the browser. Everything runs on the device. There's no backend.
-
-> **Platform note.** The master specification asks for a native Kotlin/Android app. This build is a PWA because you asked for something you can host on Vercel, and a native APK can't be hosted there. The spec's rules (offline core, local-only data, Drive-only cloud, no fabricated data, deterministic scheduling, transactions, audit trail) are kept. What changes with the platform is listed in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md#platform-deviations).
-
-## Deploy to Vercel (about 2 minutes)
-
-**Option A: dashboard**
-1. Push this folder to a GitHub repository.
-2. On vercel.com, click **Add New → Project → Import** your repository.
-3. Vercel detects Vite. Leave the defaults (build `npm run build`, output `dist`) and click **Deploy**.
-4. Optional, for Drive backup: under **Settings → Environment Variables**, add `VITE_GOOGLE_CLIENT_ID` (see [docs/BACKUP.md](docs/BACKUP.md)), then redeploy.
-
-**Option B: CLI**
-```bash
-npm i -g vercel
-cd medtrack
-vercel            # first deploy (preview)
-vercel --prod     # production
-```
-
-`vercel.json` already sets the SPA rewrites, the service-worker cache header and a strict Content-Security-Policy.
-
-**Install on a phone:** open your Vercel URL in Chrome (Android) and choose **Install app**. On iOS Safari, use **Share → Add to Home Screen**. After the first load, the app and the bundled catalogue are cached and work in airplane mode.
-
-## Run locally
-
-```bash
-npm install
-npm run dev        # http://localhost:5173
-npm test           # 59 unit/integration tests (vitest)
-npm run build      # production build → dist/
-npm run preview    # serve the production build (with service worker)
-```
-
-Requires Node 18+.
-
-## What's inside
-
-| Path | Contents |
-|---|---|
-| `public/data/marrow_catalogue.json` / `.csv` | Validated catalogue: **1,733 videos, 19 subjects, 1,338.7 h @1x**, with source page and row for every record |
-| `public/data/import_report.json`, `docs/IMPORT_REPORT.md` | Phase 0 extraction and validation report |
-| `tools/extract_crambook.py` | Offline PDF → JSON/CSV extractor (pdfplumber) |
-| `src/db/schema.ts` | Relational IndexedDB schema (19 tables, indexes, versioned migrations) |
-| `src/domain/` | Pure logic: calculations, scheduler, importer, analytics |
-| `src/data/` | Repository layer (transactions + audit trail), settings, live queries |
-| `src/backup/` | Encrypted archive (AES-256-GCM), Google Drive appData client, offline queue |
-| `src/pages/` | Screens: Home, Schedule, Lectures, Subject, Lecture, MCQs, Analytics, Revision, Timer, Audit, Settings, Backup, Import, Onboarding |
-| `src/test/` | Automated tests |
-| `docs/` | Architecture, database, scheduling, backup, user guide, QA checklist |
-
-## Features at a glance
-
-- **Catalogue:** 1,733 lectures (Main / Revision / MCQ Discussion) with search, filters, sorting, bulk actions, tags, NEET PG / INI-CET relevance tags, and subject rename/reorder/hide/archive.
-- **Tracking:** five statuses, inclusion kept separate from completion, speeds 1.0/1.2/1.5/1.8/2.0x with override → subject → global precedence, actual time kept separate from planned time, audit history with undo.
-- **QBank:** sessions logged independently of MCQ Discussion videos, validation, accuracy (correct ÷ attempted), targets, CSV import, difficulty flags, mistake notes.
-- **Revision:** configurable intervals (default 1/3/7/15/30 days) globally or per item, confidence ratings, today/overdue/upcoming views.
-- **Scheduling:** deterministic Balanced / Deadline / Flexible modes, atomic videos with overrun disclosed (or optional splitting), off days, priorities, pinned and manual tasks, revisions counted inside daily capacity, and a recovery plan with preview plus "Apply" or "Keep my schedule".
-- **Analytics:** readiness index with visible components and editable weights, finish-date scenarios, What-if Speed Simulator, Study Reality Check, Weak Topic Radar, per-subject completion forecast, milestones, mock tests, heatmap, weekly reports, preparation debt, data health.
-- **Privacy:** no server, analytics or ads. The only optional network use is Google Drive.
-#   M E D T R A C K 
- 
- 
+**MEDTRACK** — Organize your preparation. Track your progress. Stay consistent.
