@@ -1,0 +1,32 @@
+{
+  "name": "medtrack",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Offline-first NEET PG & INI-CET preparation tracker (PWA)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "extract": "python3 tools/extract_crambook.py"
+  },
+  "dependencies": {
+    "dexie": "4.0.10",
+    "dexie-react-hooks": "1.1.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.28.0",
+    "read-excel-file": "5.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "fake-indexeddb": "6.0.0",
+    "typescript": "5.6.3",
+    "vite": "5.4.11",
+    "vite-plugin-pwa": "0.21.1",
+    "vitest": "2.1.8"
+  }
+}

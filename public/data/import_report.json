@@ -1,0 +1,716 @@
+{
+ "sourceFile": "8bd99704-Copy_of_Marrow_Crambook.pdf",
+ "pageCount": 23,
+ "extractionMethod": "pdfplumber table extraction (cell-level, wrapped cells joined within a single table cell)",
+ "recordCount": 1733,
+ "countByModule": {
+  "Main": 1311,
+  "Revision": 271,
+  "MCQ": 151
+ },
+ "minutesByModule": {
+  "Revision": 14185.0,
+  "Main": 57898.0,
+  "MCQ": 8239.0
+ },
+ "bySubject": {
+  "Anatomy": {
+   "Main": {
+    "count": 91,
+    "minutes": 3758.0
+   },
+   "Revision": {
+    "count": 12,
+    "minutes": 719.0
+   },
+   "MCQ": {
+    "count": 5,
+    "minutes": 364.0
+   }
+  },
+  "Physiology": {
+   "Main": {
+    "count": 62,
+    "minutes": 3148.0
+   },
+   "Revision": {
+    "count": 16,
+    "minutes": 989.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 330.0
+   }
+  },
+  "Biochemistry": {
+   "Main": {
+    "count": 54,
+    "minutes": 2636.0
+   },
+   "MCQ": {
+    "count": 14,
+    "minutes": 744.0
+   },
+   "Revision": {
+    "count": 11,
+    "minutes": 705.0
+   }
+  },
+  "Pharmacology": {
+   "Main": {
+    "count": 75,
+    "minutes": 3581.0
+   },
+   "Revision": {
+    "count": 13,
+    "minutes": 636.0
+   },
+   "MCQ": {
+    "count": 10,
+    "minutes": 315.0
+   }
+  },
+  "Pathology": {
+   "Main": {
+    "count": 79,
+    "minutes": 3891.0
+   },
+   "Revision": {
+    "count": 15,
+    "minutes": 835.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 338.0
+   }
+  },
+  "Microbiology": {
+   "Main": {
+    "count": 90,
+    "minutes": 2405.0
+   },
+   "Revision": {
+    "count": 14,
+    "minutes": 761.0
+   },
+   "MCQ": {
+    "count": 8,
+    "minutes": 350.0
+   }
+  },
+  "Forensic Medicine": {
+   "Main": {
+    "count": 44,
+    "minutes": 2076.0
+   },
+   "Revision": {
+    "count": 10,
+    "minutes": 446.0
+   },
+   "MCQ": {
+    "count": 9,
+    "minutes": 368.0
+   }
+  },
+  "Opthalmology": {
+   "Main": {
+    "count": 52,
+    "minutes": 2689.0
+   },
+   "Revision": {
+    "count": 12,
+    "minutes": 517.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 311.0
+   }
+  },
+  "ENT": {
+   "Main": {
+    "count": 65,
+    "minutes": 2914.0
+   },
+   "Revision": {
+    "count": 15,
+    "minutes": 787.0
+   },
+   "MCQ": {
+    "count": 10,
+    "minutes": 693.0
+   }
+  },
+  "SPM": {
+   "Main": {
+    "count": 100,
+    "minutes": 3714.0
+   },
+   "Revision": {
+    "count": 18,
+    "minutes": 943.0
+   },
+   "MCQ": {
+    "count": 11,
+    "minutes": 740.0
+   }
+  },
+  "Dermatology": {
+   "Main": {
+    "count": 26,
+    "minutes": 892.0
+   },
+   "Revision": {
+    "count": 7,
+    "minutes": 260.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 242.0
+   }
+  },
+  "Anesthesia": {
+   "Main": {
+    "count": 28,
+    "minutes": 1433.0
+   },
+   "Revision": {
+    "count": 9,
+    "minutes": 481.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 276.0
+   }
+  },
+  "Psychiatry": {
+   "Main": {
+    "count": 22,
+    "minutes": 1007.0
+   },
+   "Revision": {
+    "count": 6,
+    "minutes": 275.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 396.0
+   }
+  },
+  "Radiology": {
+   "Main": {
+    "count": 42,
+    "minutes": 1808.0
+   },
+   "Revision": {
+    "count": 9,
+    "minutes": 452.0
+   },
+   "MCQ": {
+    "count": 8,
+    "minutes": 418.0
+   }
+  },
+  "Medicine": {
+   "Main": {
+    "count": 204,
+    "minutes": 8090.0
+   },
+   "Revision": {
+    "count": 43,
+    "minutes": 2109.0
+   },
+   "MCQ": {
+    "count": 5,
+    "minutes": 349.0
+   }
+  },
+  "Surgery": {
+   "Main": {
+    "count": 84,
+    "minutes": 4103.0
+   },
+   "Revision": {
+    "count": 15,
+    "minutes": 771.0
+   },
+   "MCQ": {
+    "count": 11,
+    "minutes": 488.0
+   }
+  },
+  "OBGYN": {
+   "Main": {
+    "count": 113,
+    "minutes": 5973.0
+   },
+   "Revision": {
+    "count": 18,
+    "minutes": 1290.0
+   },
+   "MCQ": {
+    "count": 12,
+    "minutes": 750.0
+   }
+  },
+  "Pediatrics": {
+   "Main": {
+    "count": 55,
+    "minutes": 2477.0
+   },
+   "Revision": {
+    "count": 16,
+    "minutes": 873.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 388.0
+   }
+  },
+  "Orthopedics": {
+   "Main": {
+    "count": 25,
+    "minutes": 1303.0
+   },
+   "Revision": {
+    "count": 12,
+    "minutes": 336.0
+   },
+   "MCQ": {
+    "count": 6,
+    "minutes": 379.0
+   }
+  }
+ },
+ "totalMinutes": 80322.0,
+ "dashboardSubjects": [
+  "Anatomy",
+  "Physiology",
+  "Biochemistry",
+  "Pharmacology",
+  "Pathology",
+  "Microbiology",
+  "Forensic Medicine",
+  "Opthalmology",
+  "ENT",
+  "SPM",
+  "Dermatology",
+  "Anesthesia",
+  "Psychiatry",
+  "Radiology",
+  "Medicine",
+  "Surgery",
+  "OBGYN",
+  "Pediatrics",
+  "Orthopedics"
+ ],
+ "subjectsWithoutRecords": [],
+ "sampleSchedule": {
+  "rows": 52,
+  "subjects": {
+   "Opthalmology": 52
+  },
+  "minutes": 2689.0,
+  "rowsNotMatchedInMasterData": []
+ },
+ "sampleSettingsObserved": {
+  "speed": "1.8x",
+  "dailyHours": 2.0,
+  "startDate": "2026-11-07",
+  "note": "sample workbook inputs, NOT user preferences"
+ },
+ "dashboardPriorities": {
+  "Anatomy": [
+   "4",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Physiology": [
+   "5",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Biochemistry": [
+   "6",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Pharmacology": [
+   "7",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Pathology": [
+   "8",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Microbiology": [
+   "9",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Forensic Medicine": [
+   "10",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Opthalmology": [
+   "3",
+   "3",
+   "52",
+   "44.8",
+   "24.9",
+   "07-Nov-26",
+   "19-Nov-26"
+  ],
+  "ENT": [
+   "11",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "SPM": [
+   "12",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Dermatology": [
+   "13",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Anesthesia": [
+   "14",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Psychiatry": [
+   "15",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Radiology": [
+   "16",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Medicine": [
+   "1",
+   "1",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Surgery": [
+   "17",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "OBGYN": [
+   "2",
+   "2",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Pediatrics": [
+   "18",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ],
+  "Orthopedics": [
+   "19",
+   "0",
+   "0.0",
+   "0.0",
+   "–",
+   "–"
+  ]
+ },
+ "issues": [
+  {
+   "type": "exact_duplicate",
+   "title": "Enzymes MCQ Discussion",
+   "pages": [
+    6,
+    6
+   ],
+   "detail": "2 identical rows (kept all, distinct IDs)"
+  },
+  {
+   "type": "exact_duplicate",
+   "title": "Carbohydrates MCQ Discussion",
+   "pages": [
+    6,
+    6
+   ],
+   "detail": "2 identical rows (kept all, distinct IDs)"
+  },
+  {
+   "type": "exact_duplicate",
+   "title": "Lipids MCQ Discussion",
+   "pages": [
+    6,
+    6
+   ],
+   "detail": "2 identical rows (kept all, distinct IDs)"
+  },
+  {
+   "type": "exact_duplicate",
+   "title": "Proteins and Amino Acids MCQ Discussion",
+   "pages": [
+    6,
+    6
+   ],
+   "detail": "2 identical rows (kept all, distinct IDs)"
+  },
+  {
+   "type": "exact_duplicate",
+   "title": "Vitamins and Minerals MCQ Discussion",
+   "pages": [
+    6,
+    6
+   ],
+   "detail": "2 identical rows (kept all, distinct IDs)"
+  },
+  {
+   "type": "exact_duplicate",
+   "title": "Molecular Biology MCQ Discussion",
+   "pages": [
+    6,
+    6
+   ],
+   "detail": "2 identical rows (kept all, distinct IDs)"
+  },
+  {
+   "type": "exact_duplicate",
+   "title": "Biochemistry GT Discussion",
+   "pages": [
+    6,
+    6
+   ],
+   "detail": "2 identical rows (kept all, distinct IDs)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "9th, 10th, 11th and 12th Cranial Nerves",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Ascending Tracts of Spinal Cord",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Descending Tracts of Spinal Cord",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "External Features of Brainstem and IVth Ventricle",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Auditory and Trigeminothalamic Pathways",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Pontine and Medullary Syndromes",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Thalamus and Its Connections",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Pre-Implantation and Early Implantation: Gametogenesis to Bilaminar Disc Formation",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Trilaminar Differentiation: Gastrulation, Neurulation, and Germ Layer",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 4,
+   "title": "Development of Inter-atrial, Inter-ventricular System and Truncus Arteriosus",
+   "detail": "title overflowed into duration column; duration 27.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Intermuscular Scapular Spaces and Axilla",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Lumbar Plexus and Deep Fascia of the Thigh",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Portal Vein and Portocaval Anastomosis",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Histology: Lymphatic System",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 4,
+   "title": "Histology: Respiratory Tract",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 5,
+   "title": "Histology: Gastrointestinal Tract",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 5,
+   "title": "Histology: Endocrine System",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 5,
+   "title": "Head, Neck and Face MCQ Discussion",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 5,
+   "title": "Neuroanatomy and Abdomen MCQ Discussion",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "wrapped_title_joined",
+   "page": 5,
+   "title": "Embryology MCQ Discussion",
+   "detail": "multi-line cell joined (same table cell)"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 6,
+   "title": "Reproductive Physiology , Exercise physiology and Regulation of Body Temperature",
+   "detail": "title overflowed into duration column; duration 51.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 7,
+   "title": "ADR and Pharmacovigilance, Pharmacogenetics and Pharmacogenomics",
+   "detail": "title overflowed into duration column; duration 45.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 8,
+   "title": "Systemic Pathology: Gastrointestinal, Endocrine and Musculoskeletal System",
+   "detail": "title overflowed into duration column; duration 64.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 10,
+   "title": "Ocular Routes of Drug Administration, Blood Supply of Eye and Embryology of Eye",
+   "detail": "title overflowed into duration column; duration 69.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 13,
+   "title": "Infectious Disease Epidemiology, Concept of Prevention and Health Indicators MCQ Discussion",
+   "detail": "title overflowed into duration column; duration 65.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 13,
+   "title": "Health Care System of India and Health Planning and Management MCQ Discussion",
+   "detail": "title overflowed into duration column; duration 82.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 14,
+   "title": "Regional Anaesthesia, Anaesthesia Machines and Circuits, and Day Care Surgery",
+   "detail": "title overflowed into duration column; duration 85.0 verified against layout text/rendered page; review recommended"
+  },
+  {
+   "type": "overflow_repaired",
+   "page": 22,
+   "title": "Metabolic Disorders, Joint Disorders and Orthopaedic Infections MCQ Discussion",
+   "detail": "title overflowed into duration column; duration 65.0 verified against layout text/rendered page; review recommended"
+  }
+ ],
+ "notes": [
+  "Subject spelled 'Opthalmology' in source; display name 'Ophthalmology', sourceName preserved.",
+  "MCQ module rows are MCQ Discussion VIDEOS, not QBank question counts.",
+  "sampleSelected flag = included in the PDF's sample schedule, NOT completion."
+ ]
+}
